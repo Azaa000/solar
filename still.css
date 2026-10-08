@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(./galaxy.webp);
+}
+.system {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sun {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-image: url(./sun.png);
+  background-size: cover;
+}
+.orbit {
+  position: absolute;
+  width: var(--orbit);
+  height: var(--orbit);
+  border: 1px dashed white;
+  border-radius: 50%;
+  animation: spin var(--time) linear infinite;
+}
+.planet {
+  width: var(--size);
+  height: var(--size);
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  background: var(--bg-image) center/cover no-repeat;
+  animation: spin var(--rotation) infinite;
+}
+.planet-1{
+    width: var(--size);
+    height: var(--size);
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    background: var(--bg-image) center/cover no-repeat;
+    animation: spin var(--rotation) infinite ease-in-out;
+}
+@keyframes spin {
+    to{
+        transform: rotate(360deg);
+    }
+}
+.mercury {
+  --orbit: 150px;
+  --time: 8.8s;
+  --size: 15px;
+  --rotation: 5.86s;
+}
+.venus {
+  --orbit: 200px;
+  --time: 22.5s;
+  --size: 20px;
+  --rotation: 24.3s;
+}
+.earth {
+  --orbit: 300px;
+  --time: 36.5s;
+  --size: 23px;
+  --rotation: 1s;
+}
+.mars {
+  --orbit: 400px;
+  --time: 68.7s;
+  --size: 17px;
+  --rotation: 1.025s;
+}
+.jupiter {
+  --orbit: 550px;
+  --time: 118.6s;
+  --size: 45px;
+  --rotation: 0.41s;
+}
+.saturn {
+  --orbit: 650px;
+  --time: 294.6s;
+  --size: 40px;
+  --rotation: 0.445s;
+}
+.uranus {
+  --orbit: 750px;
+  --time: 840s;
+  --size: 35px;
+  --rotation: 0.717s;
+}
+.neptune {
+  --orbit: 850px;
+  --time: 1648s;
+  --size: 33px;
+  --rotation: 0.671s;
+}
